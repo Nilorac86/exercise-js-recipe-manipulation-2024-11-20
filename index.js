@@ -50,8 +50,19 @@ console.log(imageInfo);
 
 // 6. How many ingredients has the paste?
 
+const ingredientsContainer = document.querySelector(".ingredients-list-paste");
+
+const ingredients =ingredientsContainer.childElementCount;
+
+console.log(`There is ${ingredients} ingredients in the paste`);
 
 // 7. Which is the forth element in the list containing the ingredients for the paste?
+
+const forthIngredient= ingredientsContainer.children[3];
+
+
+console.log(`The forth ingredient is ${forthIngredient.textContent}`);
+ 
 
 // 8. Create an an array of objects from the instructions. Each element in the array 
 // should be an object that looks like this:
@@ -62,3 +73,30 @@ console.log(imageInfo);
 //   text: instruction;
 // }
 // ```
+
+const arrayOfInstructions = []
+
+// const instruction1 = {
+//     order: 1,
+//     text:`Smula sönder 10 stycken digistivetex och blanda sen med smöret. 
+//     Bred ut det i botten av en en rund form med lösbara kanter. 
+//     Det ska bli som en tjockt täcke på botten av formen.`,
+// };
+
+// const instruction2 = {
+//     order: 2,
+//     text:`Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, 
+//     äggulorna i en liten bunke.`,
+// };
+
+// const instruction3 = {
+//     order: 3,
+//     text:`Vispa äggvitorna hårt med en elvisp. De är tillräckligt vispade 
+//     när du kan vända uppochner på bunken utan att det rör sig.`,
+// };
+
+// arrayOfInstructions.push(instruction1, instruction2, instruction3);
+
+console.log(arrayOfInstructions);
+
+
