@@ -37,15 +37,14 @@ const height = img.scrollHeight;
 
 console.log(`The height of the image is: ${height} and the width is: ${width}`);
 
-const imageSrc = document.querySelector(".image-container img");
+
 
 const imageInfo = {
-    url:"image",
-    height:612,
-    width: 437,
+  url: img.src,
+  height: img.scrollHeight,
+  width: img.scrollWidth,
 };
-
-console.log(imageInfo);
+console.log("Image Info:", imageInfo);
 
 
 // 6. How many ingredients has the paste?
@@ -73,30 +72,18 @@ console.log(`The forth ingredient is ${forthIngredient.textContent}`);
 //   text: instruction;
 // }
 // ```
+  
 
-const arrayOfInstructions = []
+const instructionsList = document.querySelectorAll(".instructions-list li");
+const instructionsArray = [];
 
-// const instruction1 = {
-//     order: 1,
-//     text:`Smula sönder 10 stycken digistivetex och blanda sen med smöret. 
-//     Bred ut det i botten av en en rund form med lösbara kanter. 
-//     Det ska bli som en tjockt täcke på botten av formen.`,
-// };
+instructionsList.forEach((item, index)=> {
+  
+  instructionsArray.push({
+    order: index +1,
+    text:item.innerText
+  });
+});
 
-// const instruction2 = {
-//     order: 2,
-//     text:`Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, 
-//     äggulorna i en liten bunke.`,
-// };
-
-// const instruction3 = {
-//     order: 3,
-//     text:`Vispa äggvitorna hårt med en elvisp. De är tillräckligt vispade 
-//     när du kan vända uppochner på bunken utan att det rör sig.`,
-// };
-
-// arrayOfInstructions.push(instruction1, instruction2, instruction3);
-
-console.log(arrayOfInstructions);
-
-
+console.log("InstructionArray:", instructionsArray);
+ 
